@@ -39,8 +39,8 @@ $wgHooks['ParserBeforeInternalParse'][] = 'MarkdownExtension::onParserBeforeInte
 $wgHooks['BeforePageDisplay'][]         = 'MarkdownExtension::onBeforePageDisplay';
 
 // Load Parsedown (https://github.com/erusev/parsedown)
-require_once('Parsedown.php');
-if (file_exists(__DIR__ . '/ParsedownExtra.php'))
+require_once('./parsedown/Parsedown.php');
+if (file_exists(__DIR__ . './parsedown-extra/ParsedownExtra.php'))
 {
     // Optionally, load Parsedown Extra (https://github.com/erusev/parsedown-extra)
     require_once('ParsedownExtra.php');
