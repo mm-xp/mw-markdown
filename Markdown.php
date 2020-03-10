@@ -26,13 +26,13 @@ $wgExtensionCredits['parserhook'][] = array(
 );
 
 // Available config options
-$wgMarkdownDefaultOn    = true;
+$wgMarkdownDefaultOn    = false;
 $wgMarkdownToggleFormat = '{{%s}}';
 $wgMarkdownWikiLinks    = true;
-$wgMarkdownExtra        = false;
-$wgMarkdownHighlight    = false;
-$wgMarkdownHighlightJs  = null;
-$wgMarkdownHighlightCss = null;
+$wgMarkdownExtra        = true;
+$wgMarkdownHighlight    = true;
+$wgMarkdownHighlightJs  = '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js';
+$wgMarkdownHighlightCss = '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/styles/default.min.css';
 
 // Hook
 $wgHooks['ParserBeforeInternalParse'][] = 'MarkdownExtension::onParserBeforeInternalParse';
